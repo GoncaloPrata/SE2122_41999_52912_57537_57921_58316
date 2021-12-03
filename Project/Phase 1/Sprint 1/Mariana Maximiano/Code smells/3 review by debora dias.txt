@@ -1,0 +1,1 @@
+Code smell 3: Nothing to note. Seems simple enough.
