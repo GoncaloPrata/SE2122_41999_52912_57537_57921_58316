@@ -1,0 +1,1 @@
+Review: Despite understanding the reasoning behind this design pattern, meaning, the obvious Factory Pattern used in this construction, I believe the explanation was shallow. I had difficulty justifying some patterns too, so I understand these difficulties. To conclude, Despite being, as I previously said, shallow, it is well identified.
