@@ -1,4 +1,0 @@
-Note: I believe the title to your 2nd design pattern was forgotten.
-
-My review would be to elaborate your reasoning since I view it to be insufficient. 
-I understand the ‘straight-to-the-point’ approach on this well identified pattern, but I see this as an opportunity to enrich your doc and make it less minimal.

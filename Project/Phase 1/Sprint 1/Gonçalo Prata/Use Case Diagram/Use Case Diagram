@@ -1,4 +1,0 @@
-Use Case “Enviar e receber dados para uma base de dados SQL”:
-	Ator Principal: Utilizador
-	Ator(es) Secundário(s): Servidor SQL
-	Descrição: um utilizador pode enviar os dados de uma biblioteca que criou para uma base de dados SQL, esta base de dados pode ser usada para colaborar com outros utilizadores ou como software de controlo de versão

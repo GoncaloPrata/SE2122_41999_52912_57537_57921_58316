@@ -1,1 +1,0 @@
-Review: It’s explained in a concise way, which I consider an advantage. This identification is accompanied by a quick explanation of what is the Composite Pattern, making this review a lot easier. Maybe it could be a little more elaborated, but for the current purpose of the this first phase, it’s just enough.

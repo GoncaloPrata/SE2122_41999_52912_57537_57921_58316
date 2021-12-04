@@ -1,6 +1,0 @@
-Design Pattern 1: 
-I believe this this design pattern to be well identified but poorly justified.
-This pattern allows the class to be responsible for keeping track of its sole instance by ensuring that no other instance is created by intercepting requests to create new objects and by providing the sole way to access the instance. 
-Further, this prevents lazy creation which means the object isn’t created until needed.
-
-Maybe elaborate the reasoning a little bit more.

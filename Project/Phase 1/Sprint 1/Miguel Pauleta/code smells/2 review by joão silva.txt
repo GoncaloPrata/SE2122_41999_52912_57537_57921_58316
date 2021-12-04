@@ -1,1 +1,0 @@
-Review: Although I understand what the problem might be here, I don’t think that a String being repeated 4 times is an actual code smell. Regardless, the refactoring proposal it’s alright. 

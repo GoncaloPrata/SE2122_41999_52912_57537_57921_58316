@@ -1,4 +1,0 @@
-Design Pattern 2: 
-I view this analysis to be a little too straight forward. I believe you can elaborate the reasoning making it more substantial and explanatory. 
-I can see how you preferred a more ‘straight-to-the-point’ approach on this well identified pattern, but perhaps you can enrich your doc.
-

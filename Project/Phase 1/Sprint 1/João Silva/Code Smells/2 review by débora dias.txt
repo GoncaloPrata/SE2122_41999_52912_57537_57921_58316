@@ -1,1 +1,0 @@
-Code smell 2: I believe this refactoring proposal to be too abstract. The idea is there but the proposal code needs some work. Maybe try something more specific.

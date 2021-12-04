@@ -1,1 +1,0 @@
-The code smell is well identified. The code smell has an well put explanation and I think it’s very clear for whoever reads it. 

@@ -1,1 +1,0 @@
-Code smell 1: Not sure the refactoring proposal is the most appropriate way to resolve this code smell but also not sure about how to fix it!
