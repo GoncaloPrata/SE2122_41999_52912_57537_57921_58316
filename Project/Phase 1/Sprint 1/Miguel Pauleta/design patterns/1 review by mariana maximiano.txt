@@ -1,0 +1,1 @@
+The design pattern is well identified. As the code shows the subclasses are coupled and can be seen as twins. In my opinion, this choice of pattern could’ve been better justified so it would be easier to comprehend for whoever analysis it.
