@@ -1,0 +1,1 @@
+It seems a direct identification of the code smell and it is well explained. The refactoring proposal seems simple and also straight to the point.
