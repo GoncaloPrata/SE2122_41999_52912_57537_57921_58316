@@ -1,4 +1,8 @@
 Use Case “Enviar e receber dados para uma base de dados SQL”:
-	Ator Principal: Utilizador
-	Ator(es) Secundário(s): Servidor SQL
-	Descrição: um utilizador pode enviar os dados de uma biblioteca que criou para uma base de dados SQL, esta base de dados pode ser usada para colaborar com outros utilizadores ou como software de controlo de versão
+	Ator Principal: User
+	Ator(es) Secundário(s): não existem
+	Descrição:      Este diagrama demonstra os passos inicias que um utilizador tipicamente irá seguir após instalar a aplicação. 
+                        O utilizador irá criar uma biblioteca onde terá as diferentes entradas. O utilizador irá depois adicionar uma entrada manualmente (com mais prática e tempo
+                        o utilizador pode começar a usar ferramentas externas para adicionar entradas). O utilizador após adicionar uma entrada pode melhorar a informação da mesma,
+                        editando certos campos ou até anexar um documento à entrada para completar a informação da mesma. Para completar os passos iniciais, o utilizador pode 
+                        procurar mais referências na Internet.
