@@ -1,4 +1,5 @@
 Nome e número do aluno bem como a semana em que o mesmo teve as funções de Scrum Master
 
 Gonçalo Prata - 52912 - Semana de 22/11 a 28/11
-Miguel Pauleta- 41999 - Semana de 28/11 a 05/12
+Miguel Pauleta - 41999 - Semana de 28/11 a 05/12
+Débora Dias - 57537 - Semana de 05/12 a 12/12
