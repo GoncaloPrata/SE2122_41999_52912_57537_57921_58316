@@ -177,7 +177,14 @@ public enum StandardActions implements Action {
     EDIT_LIST(Localization.lang("Edit"), IconTheme.JabRefIcons.EDIT),
     VIEW_LIST(Localization.lang("View"), IconTheme.JabRefIcons.FILE),
     REMOVE_LIST(Localization.lang("Remove"), IconTheme.JabRefIcons.REMOVE),
-    RELOAD_LIST(Localization.lang("Reload"), IconTheme.JabRefIcons.REFRESH);
+    RELOAD_LIST(Localization.lang("Reload"), IconTheme.JabRefIcons.REFRESH),
+
+    // Actions added by studenst
+
+    PRIMEIRA_FUNCIONALIDADE(Localization.lang("Primeira Funcionalidade: Informação sobre um perfil Google Scholar")),
+    SEGUNDA_FUNCIONALIDADE(Localization.lang("Segunda Funcionalidade: Dados um certo número de perfis, mostra artigos e co-autores comuns entre os perfis")),
+    EXEMPLO_DE_JSON_ESPERADO(Localization.lang("Este JSON corresponde aos dados obtidos pela API sobre o perfil do professor Miguel Goulão"));
+
 
     private final String text;
     private final String description;

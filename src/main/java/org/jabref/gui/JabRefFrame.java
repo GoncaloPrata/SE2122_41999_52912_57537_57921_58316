@@ -690,6 +690,7 @@ public class JabRefFrame extends BorderPane {
         Menu tools = new Menu(Localization.lang("Tools"));
         Menu options = new Menu(Localization.lang("Options"));
         Menu help = new Menu(Localization.lang("Help"));
+        Menu funcionalidadesES = new Menu(Localization.lang("API Google Scholar"));
 
         file.getItems().addAll(
                 factory.createMenuItem(StandardActions.NEW_LIBRARY, new NewDatabaseAction(this, prefs)),
@@ -901,6 +902,12 @@ public class JabRefFrame extends BorderPane {
                 factory.createMenuItem(StandardActions.ABOUT, new AboutAction())
         );
 
+        funcionalidadesES.getItems().addAll(
+                factory.createMenuItem(StandardActions.PRIMEIRA_FUNCIONALIDADE , new OpenBrowserAction("https://scholar.google.com/citations?hl=en&user=tP9cyo0AAAAJ")),
+                factory.createMenuItem(StandardActions.SEGUNDA_FUNCIONALIDADE , new OpenBrowserAction("https://scholar.google.com/citations?hl=en&user=yBhrrXwAAAAJ")),
+                factory.createMenuItem(StandardActions.EXEMPLO_DE_JSON_ESPERADO , new OpenBrowserAction("https://serpapi.com/search.json?api_key=f55fdb161273599de83cc15797aa73c5b22d56c0c80395154e5368657774f58d&async=true&author_id=yBhrrXwAAAAJ&engine=google_scholar_author&hl=en"))
+        );
+
         // @formatter:on
         MenuBar menu = new MenuBar();
         menu.getStyleClass().add("mainMenu");
@@ -913,7 +920,8 @@ public class JabRefFrame extends BorderPane {
                 tools,
                 view,
                 options,
-                help);
+                help,
+                funcionalidadesES);
         menu.setUseSystemMenuBar(true);
         return menu;
     }
