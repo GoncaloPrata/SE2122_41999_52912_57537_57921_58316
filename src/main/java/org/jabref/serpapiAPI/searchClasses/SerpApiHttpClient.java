@@ -1,4 +1,4 @@
-package org.jabref.serpapiAPI;
+package org.jabref.serpapiAPI.searchClasses;
 
 import javax.net.ssl.*;
 import java.io.*;
@@ -11,7 +11,6 @@ import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
 
 /**
  * HTTPS search for Serp API

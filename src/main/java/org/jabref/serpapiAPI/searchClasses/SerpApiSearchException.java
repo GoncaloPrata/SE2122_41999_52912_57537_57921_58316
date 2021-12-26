@@ -1,4 +1,4 @@
-package org.jabref.serpapiAPI;
+package org.jabref.serpapiAPI.searchClasses;
 
 /**
  * Wrapper any exception

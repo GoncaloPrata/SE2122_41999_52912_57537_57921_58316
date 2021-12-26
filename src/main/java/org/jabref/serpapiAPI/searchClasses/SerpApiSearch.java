@@ -1,4 +1,4 @@
-package org.jabref.serpapiAPI;
+package org.jabref.serpapiAPI.searchClasses;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

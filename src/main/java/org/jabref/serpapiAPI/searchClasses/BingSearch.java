@@ -1,7 +1,6 @@
-package org.jabref.serpapiAPI;
+package org.jabref.serpapiAPI.searchClasses;
 
 import java.util.Map;
-import com.google.gson.JsonArray;
 
 /***
  * Bing Search Results using SerpApi

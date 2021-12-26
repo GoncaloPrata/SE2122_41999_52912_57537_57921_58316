@@ -1,7 +1,6 @@
-package org.jabref.serpapiAPI;
+package org.jabref.serpapiAPI.searchClasses;
 
 import java.util.Map;
-import com.google.gson.JsonArray;
 
 /***
  * Google Search Results using SerpApi
@@ -19,7 +18,7 @@ import com.google.gson.JsonArray;
 public class GoogleSearch extends SerpApiSearch {
 
   public GoogleSearch(Map<String, String> parameter, String apiKey) {
-    super(parameter, apiKey, "google");
+    super(parameter, apiKey, parameter.get("engine"));
   }
 
   public GoogleSearch() {
@@ -27,7 +26,7 @@ public class GoogleSearch extends SerpApiSearch {
   }
 
   public GoogleSearch(Map<String, String> parameter) {
-    super(parameter, "google");
+    super(parameter, parameter.get("engine"));
   }
 
 // end
