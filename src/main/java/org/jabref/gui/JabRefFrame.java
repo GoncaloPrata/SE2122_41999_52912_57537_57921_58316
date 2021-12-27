@@ -82,6 +82,7 @@ import org.jabref.gui.externalfiles.AutoLinkFilesAction;
 import org.jabref.gui.externalfiles.DownloadFullTextAction;
 import org.jabref.gui.externalfiles.FindUnlinkedFilesAction;
 import org.jabref.gui.externalfiletype.ExternalFileTypes;
+import org.jabref.gui.firstFunctionality.FirstAction;
 import org.jabref.gui.help.AboutAction;
 import org.jabref.gui.help.ErrorConsoleAction;
 import org.jabref.gui.help.HelpAction;
@@ -109,6 +110,7 @@ import org.jabref.gui.push.PushToApplicationAction;
 import org.jabref.gui.push.PushToApplicationsManager;
 import org.jabref.gui.search.GlobalSearchBar;
 import org.jabref.gui.search.RebuildFulltextSearchIndexAction;
+import org.jabref.gui.secondFunctionality.SecondAction;
 import org.jabref.gui.shared.ConnectToSharedDatabaseCommand;
 import org.jabref.gui.shared.PullChangesFromSharedAction;
 import org.jabref.gui.sidepane.SidePane;
@@ -903,8 +905,15 @@ public class JabRefFrame extends BorderPane {
         );
 
         funcionalidadesES.getItems().addAll(
-                factory.createMenuItem(StandardActions.PRIMEIRA_FUNCIONALIDADE , new OpenBrowserAction("https://scholar.google.com/citations?hl=en&user=tP9cyo0AAAAJ")),
-                factory.createMenuItem(StandardActions.SEGUNDA_FUNCIONALIDADE , new OpenBrowserAction("https://scholar.google.com/citations?hl=en&user=yBhrrXwAAAAJ")),
+
+                factory.createMenuItem(StandardActions.PRIMEIRA_FUNCIONALIDADE , new FirstAction()),
+
+                new SeparatorMenuItem(),
+
+                factory.createMenuItem(StandardActions.SEGUNDA_FUNCIONALIDADE , new SecondAction()),
+
+                new SeparatorMenuItem(),
+
                 factory.createMenuItem(StandardActions.EXEMPLO_DE_JSON_ESPERADO , new OpenBrowserAction("https://serpapi.com/search.json?api_key=f55fdb161273599de83cc15797aa73c5b22d56c0c80395154e5368657774f58d&async=true&author_id=yBhrrXwAAAAJ&engine=google_scholar_author&hl=en"))
         );
 
