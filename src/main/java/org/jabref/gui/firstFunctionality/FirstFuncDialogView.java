@@ -87,11 +87,6 @@ public class FirstFuncDialogView extends BaseDialog<Void> {
     }
 
     @FXML
-    private void openExplanation() {
-        viewModel.openExplanation();
-    }
-
-    @FXML
     private void clearFields() {
         textAreaInput.setText("");
         textAreaReport.setText("");

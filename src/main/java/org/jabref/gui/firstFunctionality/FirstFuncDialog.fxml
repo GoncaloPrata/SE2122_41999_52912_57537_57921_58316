@@ -14,10 +14,9 @@
             <HBox alignment="CENTER_LEFT">
                 <VBox alignment="CENTER_LEFT" spacing="2.0" styleClass="about-top" HBox.hgrow="NEVER">
                     <Label alignment="CENTER" contentDisplay="CENTER" styleClass="about-heading" text="${controller.viewModel.heading}" wrapText="true"/>
-                    <Hyperlink styleClass="top-padding" onAction="#openExplanation" text="What can I expect from this functionality?"/>
                     <HBox alignment="CENTER_LEFT">
                         <Label alignment="CENTER" contentDisplay="CENTER" text="Insert a valid Google Scholar ID" wrapText="true"/>
-                        <TextArea fx:id="textAreaInput" editable="true" prefHeight="10.0" prefWidth="200.0" styleClass="info-sections"/>
+                        <TextArea fx:id="textAreaInput" prefHeight="10.0" prefWidth="200.0" styleClass="info-sections"/>
                     </HBox>
                 </VBox>
             </HBox>
