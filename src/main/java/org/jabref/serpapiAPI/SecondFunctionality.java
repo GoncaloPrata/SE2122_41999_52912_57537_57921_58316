@@ -59,6 +59,10 @@ public class SecondFunctionality {
         List<String> articlesFirstProfile = new FirstFunctionality(jsonObjectWithFirstProfileData).generateArticlesWrittenByAuthor();
         List <String> articlesSecondProfile = new FirstFunctionality(jsonObjectWithSecondProfileData).generateArticlesWrittenByAuthor();
         articlesFirstProfile.retainAll(articlesSecondProfile);
+        articlesFirstProfile.add(0, "Common Articles:");
+        for (String elem : articlesFirstProfile) {
+            elem = ("\n    " + elem);
+        }
         output = articlesFirstProfile;
         return output;
     }

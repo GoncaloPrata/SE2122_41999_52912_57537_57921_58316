@@ -78,10 +78,6 @@ sourceSets {
         resources {
             srcDirs = ["src/main/java", "src/main/resources"]
         }
-        test {
-            useJUnitPlatform()
-        }
-
 
     }
 }
@@ -221,9 +217,8 @@ dependencies {
     testImplementation "org.testfx:testfx-core:4.0.17-alpha-SNAPSHOT"
     testImplementation "org.testfx:testfx-junit5:4.0.17-alpha-SNAPSHOT"
     testImplementation "org.hamcrest:hamcrest-library:2.2"
-    // Github
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
+
 
     checkstyle 'com.puppycrawl.tools:checkstyle:9.2'
     xjc group: 'org.glassfish.jaxb', name: 'jaxb-xjc', version: '3.0.1'
