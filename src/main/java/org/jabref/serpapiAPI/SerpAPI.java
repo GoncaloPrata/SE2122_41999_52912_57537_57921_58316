@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import org.jabref.serpapiAPI.searchClasses.GoogleSearch;
 import org.jabref.serpapiAPI.searchClasses.SerpApiSearchException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,7 @@ import java.util.Map;
 public class SerpAPI {
 
     private static final String API_KEY = "f55fdb161273599de83cc15797aa73c5b22d56c0c80395154e5368657774f58d";
-    List<String> resultOfSearch;
+    private List<String> resultOfSearch;
 
     /**
      *
@@ -19,8 +20,14 @@ public class SerpAPI {
      * @throws SerpApiSearchException
      */
     public SerpAPI (String userID) throws SerpApiSearchException {
-        FirstFunctionality firstFunctionality = new FirstFunctionality(generateJSONObjectFromID(userID));
-        resultOfSearch = firstFunctionality.generateOutput();
+        if (checkIfIDIsValid(userID)) {
+            FirstFunctionality firstFunctionality = new FirstFunctionality(generateJSONObjectFromID(userID));
+            resultOfSearch = firstFunctionality.generateOutput();
+        }
+        else {
+            resultOfSearch = new ArrayList<>();
+            resultOfSearch.add("The given ID was not valid.");
+        }
     }
 
     /**
@@ -30,8 +37,14 @@ public class SerpAPI {
      * @throws SerpApiSearchException
      */
     public SerpAPI (String firstUserID, String secondUserID) throws SerpApiSearchException {
-        SecondFunctionality secondFunctionality = new SecondFunctionality(generateJSONObjectFromID(firstUserID), generateJSONObjectFromID(secondUserID));
-        resultOfSearch = secondFunctionality.generateOutput();
+        if (checkIfIDIsValid(firstUserID) && checkIfIDIsValid(secondUserID)) {
+            SecondFunctionality secondFunctionality = new SecondFunctionality(generateJSONObjectFromID(firstUserID), generateJSONObjectFromID(secondUserID));
+            resultOfSearch = secondFunctionality.generateOutput();
+        }
+        else {
+            resultOfSearch = new ArrayList<>();
+            resultOfSearch.add("One of the given ID's was not valid.");
+        }
     }
 
     /**
@@ -52,10 +65,9 @@ public class SerpAPI {
         return result;
     }
 
-    // TODO
     private boolean checkIfIDIsValid (String id) throws SerpApiSearchException {
         JsonObject objectToEvaluate = generateJSONObjectFromID(id);
-        return false;
+        return (objectToEvaluate.has("author") && objectToEvaluate.has("articles") && objectToEvaluate.has("co_authors"));
     }
 
     public List<String> getResultOfSearch() {
