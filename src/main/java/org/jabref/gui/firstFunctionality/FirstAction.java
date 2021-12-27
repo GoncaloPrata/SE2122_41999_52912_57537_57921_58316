@@ -21,5 +21,6 @@ public class FirstAction extends SimpleCommand {
 
     public FirstFuncDialogView getAboutDialogView() {
         return firstFuncDialogView;
-    }
+     }
 }
+
