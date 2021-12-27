@@ -103,7 +103,7 @@ public class SecondFuncDialogView extends BaseDialog<Void> {
     @FXML
     private void researchId() throws SerpApiSearchException {
         textAreaReport.setText("");
-        if(textAreaInput1.getText().equals(""))
+        if(textAreaInput1.getText().equals("") || textAreaInput2.getText().equals(""))
             dialogService.notify(Localization.lang("Don't forget to insert an ID"));
         else{
             idToResearch1 = textAreaInput1.getText();
