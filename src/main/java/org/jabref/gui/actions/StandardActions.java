@@ -179,7 +179,7 @@ public enum StandardActions implements Action {
     REMOVE_LIST(Localization.lang("Remove"), IconTheme.JabRefIcons.REMOVE),
     RELOAD_LIST(Localization.lang("Reload"), IconTheme.JabRefIcons.REFRESH),
 
-    // Actions added by studenst
+    // Actions added by students
 
     PRIMEIRA_FUNCIONALIDADE(Localization.lang("Primeira Funcionalidade: Informação sobre um perfil Google Scholar")),
     SEGUNDA_FUNCIONALIDADE(Localization.lang("Segunda Funcionalidade: Dados um certo número de perfis, mostra artigos e co-autores comuns entre os perfis")),
