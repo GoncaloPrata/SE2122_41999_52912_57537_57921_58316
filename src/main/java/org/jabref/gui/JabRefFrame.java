@@ -910,12 +910,9 @@ public class JabRefFrame extends BorderPane {
 
                 new SeparatorMenuItem(),
 
-                factory.createMenuItem(StandardActions.SEGUNDA_FUNCIONALIDADE , new SecondAction()),
+                factory.createMenuItem(StandardActions.SEGUNDA_FUNCIONALIDADE , new SecondAction())
 
-                new SeparatorMenuItem(),
-
-                factory.createMenuItem(StandardActions.EXEMPLO_DE_JSON_ESPERADO , new OpenBrowserAction("https://serpapi.com/search.json?api_key=f55fdb161273599de83cc15797aa73c5b22d56c0c80395154e5368657774f58d&async=true&author_id=yBhrrXwAAAAJ&engine=google_scholar_author&hl=en"))
-        );
+                );
 
         // @formatter:on
         MenuBar menu = new MenuBar();
