@@ -2,6 +2,7 @@ package org.jabref.serpapiAPI;
 
 import com.google.gson.JsonObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SecondFunctionality {
@@ -32,7 +33,9 @@ public class SecondFunctionality {
      */
     public List<String> generateOutput() {
         List<String> output = generateCommonInterests();
+        output.add(0, "Common interests:");
         output.addAll(generateCommonArticles());
+        output.add("\nCommon co-authors:\n");
         output.addAll(generateCommonCoAuthors());
         return output;
     }
@@ -42,11 +45,14 @@ public class SecondFunctionality {
      * @return the output which corresponds to the common interests between the two IDs.
      */
     private List<String> generateCommonInterests() {
-        List<String> output = null;
+        List<String> output = new ArrayList<>();
         List<String> interestsFirstProfile = new FirstFunctionality(jsonObjectWithFirstProfileData).generateGeneralInformation();
         List <String> interestsSecondProfile = new FirstFunctionality(jsonObjectWithSecondProfileData).generateGeneralInformation();
         interestsFirstProfile.retainAll(interestsSecondProfile);
-        output = interestsFirstProfile;
+        if(interestsFirstProfile.size() == 0)
+            output.add(" No common interests between authors.\n");
+        else
+            output = interestsFirstProfile;
         return output;
     }
 
@@ -55,11 +61,16 @@ public class SecondFunctionality {
      * @return the output which corresponds to the common articles between the two IDs.
      */
     private List<String> generateCommonArticles() {
-        List<String> output = null;
+        List<String> output = new ArrayList<>();
         List<String> articlesFirstProfile = new FirstFunctionality(jsonObjectWithFirstProfileData).generateArticlesWrittenByAuthor();
         List <String> articlesSecondProfile = new FirstFunctionality(jsonObjectWithSecondProfileData).generateArticlesWrittenByAuthor();
         articlesFirstProfile.retainAll(articlesSecondProfile);
-        output = articlesFirstProfile;
+        if(articlesFirstProfile.size() == 0)
+            output.add("\nArticles: No common articles between authors.\n");
+        else {
+            output.add("\nArticles: " + articlesFirstProfile.size() + "\n");
+            output = articlesFirstProfile;
+        }
         return output;
     }
 
@@ -68,11 +79,17 @@ public class SecondFunctionality {
      * @return the output which corresponds to the common co-authors between the two IDs.
      */
     private List<String> generateCommonCoAuthors() {
-        List<String> output = null;
+        List<String> output = new ArrayList<>();
         List<String> authorsFirstProfile = new FirstFunctionality(jsonObjectWithFirstProfileData).generateCoAuthors();
         List <String> authorsSecondProfile = new FirstFunctionality(jsonObjectWithSecondProfileData).generateCoAuthors();
         authorsFirstProfile.retainAll(authorsSecondProfile);
-        output = authorsFirstProfile;
+        if(authorsFirstProfile.size() == 0)
+            output.add("No common co-authors between authors.\n");
+        else {
+            for (int i = 0; i < authorsFirstProfile.size(); i++) {
+                output.add(authorsFirstProfile.get(i) + "\n");
+            }
+        }
         return output;
     }
 

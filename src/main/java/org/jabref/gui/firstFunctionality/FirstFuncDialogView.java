@@ -12,7 +12,7 @@ import org.jabref.gui.util.ControlHelper;
 import org.jabref.logic.l10n.Localization;
 import com.airhacks.afterburner.views.ViewLoader;
 
-import org.jabref.logic.serpapiAPI.SearchAPI;
+import org.jabref.serpapiAPI.SerpAPI;
 import org.jabref.serpapiAPI.searchClasses.SerpApiSearchException;
 
 
@@ -78,8 +78,8 @@ public class FirstFuncDialogView extends BaseDialog<Void> {
             dialogService.notify(Localization.lang("Don't forget to insert an ID"));
         else {
             idToResearch = textAreaInput.getText();
-            SearchAPI tmp = new SearchAPI(idToResearch);
-            for (String elem : tmp.primeiraFuncionalidade()) {
+            SerpAPI tmp = new SerpAPI(idToResearch);
+            for (String elem : tmp.getResultOfSearch()) {
                 textAreaReport.appendText(elem);
             }
             dialogService.notify(Localization.lang("Research completed"));

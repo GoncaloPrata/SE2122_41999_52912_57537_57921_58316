@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FirstFunctionality {
@@ -20,7 +21,9 @@ public class FirstFunctionality {
      */
     public List<String> generateOutput() {
         List<String> output = generateGeneralInformation();
+        output.add("\nArticles:\n");
         output.addAll(generateArticlesWrittenByAuthor());
+        output.add("Co-authors:\n");
         output.addAll(generateCoAuthors());
         return output;
     }
@@ -30,14 +33,14 @@ public class FirstFunctionality {
      * @return the general information of the author
      */
     public List<String> generateGeneralInformation() {
-        List<String> output = null;
+        List<String> output = new ArrayList<>();
         JsonObject author = jsonObjectWithProfileData.get("author").getAsJsonObject(); // Subsecção do JSON "author"
         String nameOfAuthor = author.get("name").getAsString();
         String affiliationsOfAuthor = author.get("affiliations").getAsString();
-        output.add("Nome: " + nameOfAuthor + "\nAfiliações: " + affiliationsOfAuthor + "\nInteresses: ");
+        output.add("Name: " + nameOfAuthor + "\nAffiliation: " + affiliationsOfAuthor + "\nInterest: ");
         JsonArray interestsAuthor = author.get("interests").getAsJsonArray();
         for (JsonElement interesses : interestsAuthor) {
-            output.add("    " + interesses.getAsJsonObject().get("title").getAsString());
+            output.add("   " + interesses.getAsJsonObject().get("title").getAsString() + ";");
         }
 
         return output;
@@ -49,8 +52,7 @@ public class FirstFunctionality {
      * @return the articles by an author
      */
     public List<String> generateArticlesWrittenByAuthor() {
-        List<String> output = null;
-        output.add("Artigos:");
+        List<String> output = new ArrayList<>();
         JsonArray artigosAutor = jsonObjectWithProfileData.getAsJsonArray("articles");
         for (JsonElement artigos : artigosAutor) {
             String titleArticle = artigos.getAsJsonObject().get("title").getAsString();
@@ -58,7 +60,7 @@ public class FirstFunctionality {
             String authorsArticle = artigos.getAsJsonObject().get("authors").getAsString();
             output.add("    Title: " + titleArticle +
                     "\n    Link: " + linkArticle +
-                    "\n    Autores: " + authorsArticle + "\n\n");
+                    "\n    Authors: " + authorsArticle + "\n\n");
         }
         return output;
     }
@@ -68,8 +70,7 @@ public class FirstFunctionality {
      * @return the coAuthors
      */
     public List<String> generateCoAuthors() {
-        List<String> output = null;
-        output.add("Co-autores:");
+        List<String> output = new ArrayList<>();
         JsonArray coauthors = jsonObjectWithProfileData.getAsJsonArray("co_authors");
         for (JsonElement co_author : coauthors) {
             String nameCo_Author = co_author.getAsJsonObject().get("name").getAsString();
