@@ -9,7 +9,7 @@ import org.jabref.gui.DialogService;
 import org.jabref.gui.util.BaseDialog;
 import org.jabref.gui.util.ControlHelper;
 import org.jabref.logic.l10n.Localization;
-import org.jabref.logic.serpapiAPI.SearchAPI;
+import org.jabref.serpapiAPI.SerpAPI;
 import org.jabref.serpapiAPI.searchClasses.SerpApiSearchException;
 
 import javax.inject.Inject;
@@ -108,9 +108,9 @@ public class SecondFuncDialogView extends BaseDialog<Void> {
         else{
             idToResearch1 = textAreaInput1.getText();
             idToResearch2 = textAreaInput2.getText();
-            SearchAPI user1 = new SearchAPI(idToResearch1, idToResearch2);
+            SerpAPI user1 = new SerpAPI(idToResearch1, idToResearch2);
 
-            for (String elem: user1.segundaFuncionalidade()) {
+            for (String elem: user1.getResultOfSearch()) {
                 textAreaReport.appendText(elem);
             }
 

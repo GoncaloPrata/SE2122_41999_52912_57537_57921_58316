@@ -52,12 +52,6 @@ public class SerpAPI {
         return result;
     }
 
-    // TODO
-    private boolean checkIfIDIsValid (String id) throws SerpApiSearchException {
-        JsonObject objectToEvaluate = generateJSONObjectFromID(id);
-        return false;
-    }
-
     public List<String> getResultOfSearch() {
         return resultOfSearch;
     }
