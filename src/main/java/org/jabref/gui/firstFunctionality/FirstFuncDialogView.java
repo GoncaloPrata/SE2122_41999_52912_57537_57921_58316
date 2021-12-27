@@ -13,7 +13,7 @@ import org.jabref.logic.l10n.Localization;
 import com.airhacks.afterburner.views.ViewLoader;
 
 import org.jabref.logic.serpapiAPI.SearchAPI;
-import org.jabref.logic.serpapiAPI.SerpApiSearchException;
+import org.jabref.serpapiAPI.searchClasses.SerpApiSearchException;
 
 
 public class FirstFuncDialogView extends BaseDialog<Void> {
