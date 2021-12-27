@@ -906,10 +906,16 @@ public class JabRefFrame extends BorderPane {
 
         funcionalidadesES.getItems().addAll(
 
+                /**
+                 * This creates a new "entry" in the dropdown menu that the group has developed. This entry is related to the first functionality.
+                 */
                 factory.createMenuItem(StandardActions.PRIMEIRA_FUNCIONALIDADE , new FirstAction()),
 
                 new SeparatorMenuItem(),
 
+                /**
+                 * This creates a new "entry" in the dropdown menu that the group has developed. This entry is related to the second functionality.
+                 */
                 factory.createMenuItem(StandardActions.SEGUNDA_FUNCIONALIDADE , new SecondAction())
 
                 );
