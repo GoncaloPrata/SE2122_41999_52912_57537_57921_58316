@@ -1,0 +1,34 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<DialogPane prefWidth="800.0" prefHeight="510.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jabref.gui.firstFunctionality.FirstFuncDialogView" stylesheets="@FirstFuncDialog.css">
+    <content>
+        <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_LEFT">
+                <VBox alignment="CENTER_LEFT" spacing="2.0" styleClass="about-top" HBox.hgrow="NEVER">
+                    <Label alignment="CENTER" contentDisplay="CENTER" styleClass="about-heading" text="${controller.viewModel.heading}" wrapText="true"/>
+                    <Hyperlink styleClass="top-padding" onAction="#openExplanation" text="What can I expect from this functionality?"/>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Insert a valid Google Scholar ID" wrapText="true"/>
+                        <TextArea fx:id="textAreaInput" editable="true" prefHeight="10.0" prefWidth="200.0" styleClass="info-sections"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+            <TextArea fx:id="textAreaReport" editable="false" prefHeight="300.0" prefWidth="200.0" styleClass="info-sections"/>
+        </VBox>
+    </content>
+    <header>
+    </header>
+    <ButtonType fx:id="researchButton" text="Research ID"/>
+    <ButtonType fx:id="clearResearch" text="Clear Research"/>
+    <ButtonType fx:id="copyReportButton" text="Copy Report" buttonData="LEFT"/>
+    <ButtonType fx:constant="CLOSE"/>
+</DialogPane>
