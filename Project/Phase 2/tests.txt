@@ -1,0 +1,17 @@
+ Em relação ao ficheiros de teste:
+Dado a natureza de como os dados são obtidos (através de uma API externa)
+o grupo acredita que não é possível realizar testes exaustivos já que existem
+diversos fatores que podem levar a que os dados apareçam sempre incorretos.
+Um exemplo destes fatores corresponde à aparência de carateres especiais,
+nomeadamente acentos. Foi verificado durante os testes internos da aplicação
+que o nome de certos autores que contem carateres com acentos não são
+visualizados como era esperado. Após testes exaustivos a conclusão a que o
+grupo chegou foi que a API ao enviar os dados para o programa os envia
+incorretamente impossibilitando a realização de testes. Três ocorrências podem
+ser observadas no vídeo de demonstração nos seguintes tempos: 0:24
+(em todos os artigos visíveis o autor "Miguel Goulão" aparece escrito de forma
+não esperada) , 0:25 (nome do autor e a afiliação) e 1:48 (nome dos coautores
+em comum).
+
+O output actual está diferente do do vídeo de demostração por termos de
+contornar o limite mensal de pedidos à api.
